@@ -68,7 +68,7 @@ fi
 
 # 5. Inject dylib
 info "Injecting Hydrogen-M dylib into RobloxPlayer..."
-"$HYDROGEN_APP_PATH/Contents/MacOS/insert_dylib" \
+/usr/local/bin/insert_dylib \
     "$HYDROGEN_APP_PATH/Contents/MacOS/hydrogen-m.dylib" \
     "$ROBLOX_PLAYER_COPY" "$ROBLOX_PLAYER" --all-yes
 
