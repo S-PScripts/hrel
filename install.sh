@@ -33,18 +33,18 @@ if [ ! -f "$ROBLOX_PLAYER" ]; then
 fi
 
 # 2. Check architecture
-SYSTEM_ARCH=$(uname -m)
-BINARY_ARCH=$(file "$ROBLOX_PLAYER" | grep -o 'arm64' || true)
+# SYSTEM_ARCH=$(uname -m)
+# BINARY_ARCH=$(file "$ROBLOX_PLAYER" | grep -o 'arm64' || true)
 
-if [ "$SYSTEM_ARCH" != "arm64" ]; then
-    error_exit "Hydrogen-M does not support Intel Macs. This system is $SYSTEM_ARCH."
-fi
+# if [ "$SYSTEM_ARCH" != "arm64" ]; then
+#     error_exit "Hydrogen-M does not support Intel Macs. This system is $SYSTEM_ARCH."
+# fi
 
-if [ "$BINARY_ARCH" != "arm64" ]; then
-    error_exit "RobloxPlayer is not an arm64 binary. Hydrogen-M requires arm64 builds."
-fi
+# if [ "$BINARY_ARCH" != "arm64" ]; then
+#     error_exit "RobloxPlayer is not an arm64 binary. Hydrogen-M requires arm64 builds."
+# fi
 
-info "System and RobloxPlayer architecture are compatible (arm64)."
+# info "System and RobloxPlayer architecture are compatible (arm64)."
 
 # 3. Download Hydrogen-M app
 info "Downloading Hydrogen-M from $HYDROGEN_M_URL..."
